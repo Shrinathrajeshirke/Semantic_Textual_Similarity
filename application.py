@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from utils.model import load_model, encode_texts
 from sklearn.metrics.pairwise import cosine_similarity
 
-app = Flask(__name__)
+application = Flask(__name__)
 model = load_model()
 
 @app.route('/similarity',methods=['POST'])
@@ -17,3 +17,5 @@ def get_similarity():
 
 if __name__=='__main__':
     app.run(debug=True)
+
+    
